@@ -1,0 +1,11 @@
+venv/
+.venv/
+.git/
+.env
+*.pyc
+__pycache__/
+db_test.sqlite3
+logs/
+*.sqlite3
+.DS_Store
+ssh-keygen*
