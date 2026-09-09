@@ -24,7 +24,9 @@ os.makedirs(LOG_DIR, exist_ok=True)
 SECRET_KEY = 'django-insecure-dq+t^+uo*-k^=1)=c73$p%6103-hu#_d-fmie)0m=r$3n#qp=='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG',"true") == "true"
+# Defaults to False so production is safe when DEBUG is unset.
+# Set DEBUG=true in your local .env for development.
+DEBUG = os.getenv('DEBUG', 'false').strip().lower() in ('true', '1', 'yes')
 
 ALLOWED_HOSTS = ["*"]
 
